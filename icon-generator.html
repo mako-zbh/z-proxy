@@ -86,10 +86,12 @@
         <label>128x128</label>
       </div>
     </div>
-    <button onclick="downloadAllIcons()">下载所有图标</button>
+    <button id="download-btn">下载所有图标</button>
   </div>
 
   <script>
+    document.getElementById('download-btn').addEventListener('click', downloadAllIcons);
+
     function drawIcon(canvas, isActive = false) {
       const ctx = canvas.getContext('2d');
       const size = canvas.width;
