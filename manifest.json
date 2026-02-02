@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ZProxy - 智能代理管理器",
+  "version": "2.0.0",
+  "description": "功能强大的Chrome代理插件，支持多代理管理和智能白名单过滤",
+  "permissions": [
+    "proxy",
+    "storage",
+    "webRequest",
+    "webRequestAuthProvider",
+    "management"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ZProxy"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["debug.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
